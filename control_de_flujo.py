@@ -1,8 +1,15 @@
-
 """Guarde en lista `naturales` los primeros 100 números naturales (desde el 1) 
 usando el bucle while
 """
 
+n = 1
+naturales=[]
+while n <= 100:
+  naturales.append(n)
+  n += 1
+#print(naturales)
+
+    
 
 
 
@@ -12,6 +19,15 @@ usando el bucle while
 
 Hasta el número 50.
 """
+rango = list(range(1,51))
+p = ''
+acumulado = list()
+for n in (rango):
+  p = p + ' ' + str(n)
+  p= p.lstrip()
+  acumulado.append(p)
+#print(acumulado)
+
 
 
 
@@ -20,7 +36,11 @@ Hasta el número 50.
 """
 
 
-
+suma100=0
+n=0
+while n < 100:
+  n+=1
+  suma100+=n
 
 
 
@@ -30,6 +50,17 @@ separados por coma, así:
 '134,268,...'
 
 """
+
+rangoT=list(range(1,11))
+multiplos=''
+Control = 0
+tabla100 = ''
+pr= list()
+for Control in (rangoT):
+  multiplos= 134 * Control
+  pr.append(str(multiplos))
+tabla100=",".join(pr)
+#print(tabla100)
 
 
 
@@ -42,23 +73,36 @@ está ordenada).
 lista1 = [12, 15, 20, 27, 32, 39, 42, 48, 55, 66, 75, 82, 89, 91, 93, 105, 123, 132, 150, 180, 201, 203, 231, 250, 260, 267, 300, 304, 310, 312, 321, 326]
 
 
+n1 = list()
+multiplos3 =list()
 
+for i in lista1:
+  if i%3 == 0 and i< 300:
+    n1.append(i)
+  i +=1
+#print(n1)
+multiplos3 = len(n1)
+#print(multiplos3)
 
-
-"""Guardar en `regresivo50` una lista con la cuenta regresiva desde el número 
-50 hasta el 1, así:
-
-[
-  '50 49 48 47...',
-  '49 48 47 46...',
-  ...
-  '5 4 3 2 1',
-  '4 3 2 1',
-  '3 2 1',
-  '2 1',
-  '1'
-]
 """
+re
+"""
+
+l1=list()
+l2= list()
+acumulador=list()
+regresivo50=list()
+n=1
+for i in range(51,0,-1):
+  while n<=i:
+    l1.append(str(n))
+    n=n+1
+  l2=' '.join(l1)
+  acumulador.append(l2)
+acumulador.pop(0)
+regresivo50=acumulador
+regresivo50.reverse()
+#print(regresivo50)
 
 
 
@@ -123,7 +167,17 @@ lista3 = [941, 149, 672, 208, 99, 562, 749, 947, 251, 750, 889, 596, 836, 742, 5
 """Guarde en lista `cubos` el cubo (potencia elevada a la 3) de los números del 
 1 al 100. 
 """
-
+n = 1
+cubos=[]
+while n <=100:
+  i=1
+  cubo=n
+  while i <3:
+    cubo = cubo*n
+    i += 1
+  cubos.append(cubo)
+  n+=1
+#print(cubos)
 
 
 
@@ -131,9 +185,17 @@ lista3 = [941, 149, 672, 208, 99, 562, 749, 947, 251, 750, 889, 596, 836, 742, 5
 """Encuentre la suma de la serie 2 +22 + 222 + 2222 + .. hasta sumar 10 términos 
 y guardar resultado en variable `suma_2s` 
 """
-
-
-
+n=1
+i=1
+serie ='2'
+suma_2s=0
+while n <=10:
+  while i<n:
+    serie = serie + '2'
+    i+=1
+  suma_2s = suma_2s + int(serie)
+  n +=1
+#print(suma_2s)
 
 
 """Guardar en un string llamado `patron` el siguiente patrón llegando a una 
@@ -156,7 +218,12 @@ cantidad máxima de asteriscos de 30.
 **
 *
 """
-
+patron=''
+for numero in range(1,31):
+  patron += "*"*(numero) + "\n"
+for numero in range (29,0,-1):
+  patron += "*"*(numero) + "\n"
+patron=patron.strip()
 
 
 
